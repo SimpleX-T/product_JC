@@ -1,3 +1,5 @@
+import { NewsArticle } from "../types";
+
 export const features = [
   {
     iconType: "image",
@@ -41,5 +43,29 @@ export const features = [
     title: "Email Tracking",
     description:
       "Track email opens, clicks, and responses to optimize your communication strategy and follow-up timing with potential clients.",
+  },
+];
+
+export const newsArticles: NewsArticle[] = [
+  {
+    title: "Product Mail is taking on Gmail by betting on privacy",
+    details:
+      "Ramet consectetur. Est porttitor mattis pharetra sit id viverra. Vivamus mauris augue pharetra cras turpis faucibus elit urna.",
+    date: "February 8, 2023",
+    image: "/images/privacy.svg",
+  },
+  {
+    title: "Wants You To Sign Out Of Google Workspace Forever",
+    details:
+      "Est porttitor mattis pharetra sit id viverra. Vivamus mauris augue pharetra cras turpis faucibus elit urna.",
+    date: "February 8, 2023",
+    image: "/images/workspace.svg",
+  },
+  {
+    title: "The Best Email Encryption Services for 2023",
+    details:
+      "Dorttitor mattis pharetra sit id viverra. Vivamus mauris augue pharetra cras turpis faucibus elit urna.",
+    date: "February 8, 2023",
+    image: "/images/encryption.svg",
   },
 ];

@@ -1,48 +1,31 @@
+import { FaFacebook, FaInstagram, FaXTwitter } from "react-icons/fa6";
 import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <footer className="bg-[#0F0B2A] py-16 px-4 md:px-8">
-      <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-12">
+    <footer className="py-16 px-4 md:px-8">
+      <div className="max-w-7xl mx-auto relative overflow-hidden p-4 md:px-20 md:py-12">
+        <div className="absolute top-1/2 -translate-y-1/2 right-1/2 translate-x-1/2 w-96 h-96 bg-[#7214FF30] rounded-full blur-[500px]" />
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 lg:gap-20 mb-12">
           <div className="lg:col-span-2">
-            <div className="flex items-center mb-6">
-              <svg
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-                className="mr-2"
-              >
-                <rect width="24" height="24" rx="6" fill="#7C3AED" />
-                <path
-                  d="M7 12H17"
-                  stroke="white"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                />
-                <path
-                  d="M12 7L12 17"
-                  stroke="white"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                />
-              </svg>
-              <span className="text-white font-semibold text-xl">Product</span>
+            <div className="flex items-center mb-10">
+              <Link to="/" className="flex items-center">
+                <img src="/logo.svg" alt="logo" />
+              </Link>
             </div>
 
-            <div className="mb-6">
-              <h3 className="text-white font-medium mb-3">
+            <div className="mb-6 bg-[#0E1330] border border-[#282D45] rounded-md p-6">
+              <h3 className="text-[#F6F6F7] font-['Satoshi_bold'] text-2xl mb-5">
                 Subscribe to our newsletter
               </h3>
-              <div className="flex">
+              <div>
                 <input
                   type="email"
                   placeholder="Enter your email"
-                  className="bg-[#1E1A3A] text-white border border-white/10 rounded-l-md px-4 py-2 w-full focus:outline-none focus:border-purple-500"
+                  className="bg-[#0E1330] text-[#F6F6F7] placeholder:text-[#282D45] border border-[#282D45] rounded-full px-4 py-3 w-full focus:outline-none focus:border-[#7214FF]"
                 />
-                <button className="bg-purple-600 hover:bg-purple-700 text-white px-4 py-2 rounded-r-md font-medium transition-colors">
+                <button className="bg-[#7214FF] hover:bg-purple-700 text-white px-4 py-2 rounded-full w-full font-medium transition-colors mt-4">
                   Subscribe
                 </button>
               </div>
@@ -50,7 +33,7 @@ const Footer = () => {
           </div>
 
           <div>
-            <h3 className="text-white font-medium mb-4">Product</h3>
+            <h3 className="text-white font-['Satoshi_bold'] mb-8">Product</h3>
             <ul className="space-y-2">
               <li>
                 <Link
@@ -96,7 +79,7 @@ const Footer = () => {
           </div>
 
           <div>
-            <h3 className="text-white font-medium mb-4">Company</h3>
+            <h3 className="text-white font-['Satoshi_bold'] mb-8">Company</h3>
             <ul className="space-y-2">
               <li>
                 <Link
@@ -142,7 +125,7 @@ const Footer = () => {
           </div>
 
           <div>
-            <h3 className="text-white font-medium mb-4">Resources</h3>
+            <h3 className="text-white font-['Satoshi_bold'] mb-8">Resources</h3>
             <ul className="space-y-2">
               <li>
                 <Link
@@ -193,7 +176,7 @@ const Footer = () => {
             © {new Date().getFullYear()} Product, Inc. All rights reserved.
           </div>
 
-          <div className="flex space-x-6">
+          <div className="hidden md:flex space-x-6">
             <Link
               to="/terms"
               className="text-white/60 hover:text-white text-sm transition-colors"
@@ -227,62 +210,24 @@ const Footer = () => {
           </div>
 
           <div className="flex space-x-4 mt-4 md:mt-0">
-            <a
-              href="#"
+            <Link
+              to="#"
               className="text-white/60 hover:text-white transition-colors"
             >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="20"
-                height="20"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              >
-                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
-              </svg>
-            </a>
-            <a
-              href="#"
+              <FaFacebook size={20} />
+            </Link>
+            <Link
+              to="#"
               className="text-white/60 hover:text-white transition-colors"
             >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="20"
-                height="20"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              >
-                <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
-              </svg>
-            </a>
-            <a
-              href="#"
+              <FaXTwitter size={20} />
+            </Link>
+            <Link
+              to="#"
               className="text-white/60 hover:text-white transition-colors"
             >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="20"
-                height="20"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              >
-                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
-              </svg>
-            </a>
+              <FaInstagram size={20} />
+            </Link>
           </div>
         </div>
       </div>

@@ -1,9 +1,10 @@
+import { FaArrowLeft, FaArrowRight } from "react-icons/fa6";
 import TestimonialCard from "../ui/testimonial-card";
 
 const Testimonials = () => {
   return (
     <section className="py-20 px-4 md:px-8 relative">
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-7xl mx-auto w-full">
         <div className="text-center mb-16">
           <h2 className="text-5xl font-['Satoshi_Bold'] mb-6 text-transparent bg-gradient-to-b from-[#F6F6F7] to-[#7E808F] bg-clip-text">
             What our clients say
@@ -15,35 +16,35 @@ const Testimonials = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 lg:gap-6 mb-12">
           <TestimonialCard
             name="Cameron Anderson"
             role="Engineering Lead"
-            company="TechCorp"
             content="We've tried several CRM solutions, but none were tailored for engineering teams like this one. It's streamlined our workflow and improved our client communication significantly."
-            avatar="/placeholder.svg?height=40&width=40"
+            avatar="/images/cameron.png"
           />
           <TestimonialCard
-            name="Sophia Howard"
+            name="Esther Howard"
             role="CTO"
-            company="DevStream"
             content="The security features are impressive. As someone who deals with sensitive client information daily, I appreciate the end-to-end encryption and transparent security practices."
-            avatar="/placeholder.svg?height=40&width=40"
+            avatar="/images/esther.png"
           />
           <TestimonialCard
             name="Alex Wilson"
             role="Product Manager"
-            company="InnovateTech"
             content="Our team's productivity has increased by 35% since implementing this platform. The intuitive interface and powerful features make it a must-have for any engineering team."
-            avatar="/placeholder.svg?height=40&width=40"
+            avatar="/images/alex.png"
           />
         </div>
 
         <div className="flex justify-center mt-8">
-          <div className="flex space-x-2">
-            <button className="w-2 h-2 rounded-full bg-purple-600"></button>
-            <button className="w-2 h-2 rounded-full bg-white/20"></button>
-            <button className="w-2 h-2 rounded-full bg-white/20"></button>
+          <div className="flex space-x-4 px-4">
+            <button className="p-2 border border-[#282D45] rounded-sm bg-[#0E1330] cursor-pointer hover:opacity-50 transition-opacity duration-300 text-[#8F9BB7]">
+              <FaArrowLeft size={16} />
+            </button>
+            <button className="p-2 border border-[#282D45] rounded-sm bg-[#0E1330] cursor-pointer hover:opacity-50 transition-opacity duration-300 text-[#8F9BB7]">
+              <FaArrowRight size={16} />
+            </button>
           </div>
         </div>
       </div>

@@ -1,34 +1,33 @@
 const TestimonialCard = ({
   name,
   role,
-  company,
   content,
   avatar,
 }: {
   name: string;
   role: string;
-  company: string;
   content: string;
   avatar: string;
 }) => {
   return (
-    <div className="bg-[#1E1A3A] p-6 rounded-xl border border-white/10">
-      <div className="flex items-center mb-4">
-        <div className="w-10 h-10 bg-purple-600 rounded-full overflow-hidden mr-3">
+    <div className="relative max-w-md mx-auto">
+      <div className="bg-[#0E1330] z-1 text-[#F6F6F7] border border-[#282D45] p-6 rounded-xl shadow-lg max-w-sm relative overflow-hidden w-11/12 mx-auto">
+        <div className="flex items-center gap-3 mb-4">
           <img
             src={avatar || "/placeholder.svg"}
             alt={name}
-            className="w-full h-full object-cover"
+            className="w-10 h-10 rounded-full object-cover"
           />
+          <div>
+            <h4 className="font-semibold text-white">{name}</h4>
+            <p className="text-sm text-white/70">{role}</p>
+          </div>
         </div>
-        <div>
-          <h4 className="text-white font-medium">{name}</h4>
-          <p className="text-white/60 text-sm">
-            {role}, {company}
-          </p>
-        </div>
+
+        <p className="text-sm text-white/90 leading-relaxed">{content}</p>
       </div>
-      <p className="text-white/80 text-sm">{content}</p>
+
+      <div className="absolute -bottom-6 left-0 w-full h-30 bg-gradient-to-r from-[#A64CE860] via-[#A8E9FF60] to-[#C6FFE060] z-0 rounded-xl" />
     </div>
   );
 };

@@ -49,7 +49,7 @@ const Header = () => {
 
         <div className="hidden md:block">
           <Link
-            to="/signup"
+            to="/"
             className="bg-[#7214FF] hover:bg-[#7214FF90] text-white px-[25px] py-[15px] rounded-full font-medium transition-colors"
           >
             Get a Demo
@@ -131,7 +131,7 @@ const Header = () => {
               Blog
             </Link>
             <Link
-              to="/signup"
+              to="/"
               className="bg-purple-600 hover:bg-purple-700 text-white px-4 py-2 rounded-md font-medium transition-colors text-center"
             >
               Get Started
