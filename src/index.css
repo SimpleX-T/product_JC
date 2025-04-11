@@ -1,0 +1,99 @@
+@import "tailwindcss";
+
+body {
+  margin: 0;
+  font-family: "Satoshi Regular", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #0f0b2a;
+  color: white;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+@font-face {
+  font-family: "Satoshi Regular";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Satoshi Regular"),
+    url("/satoshi-webfont/Satoshi-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Satoshi Italic";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Satoshi Italic"),
+    url("/satoshi-webfont/Satoshi-Italic.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Satoshi Light";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Satoshi Light"),
+    url("/satoshi-webfont/Satoshi-Light.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Satoshi Light Italic";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Satoshi Light Italic"),
+    url("/satoshi-webfont/Satoshi-LightItalic.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Satoshi Medium";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Satoshi Medium"),
+    url("/satoshi-webfont/Satoshi-Medium.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Satoshi Medium Italic";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Satoshi Medium Italic"),
+    url("/satoshi-webfont/Satoshi-MediumItalic.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Satoshi Bold";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Satoshi Bold"),
+    url("/satoshi-webfont/Satoshi-Bold.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Satoshi Bold Italic";
+  font-style: normal;
+  font-weight: normal;
+  src: local("/Satoshi Bold Italic"),
+    url("/satoshi-webfont/Satoshi-BoldItalic.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Satoshi Black";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Satoshi Black"),
+    url("/satoshi-webfont/Satoshi-Black.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Satoshi Black Italic";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Satoshi Black Italic"),
+    url("/satoshi-webfont/Satoshi-BlackItalic.woff") format("woff");
+}
+
+img {
+  pointer-events: none;
+}
