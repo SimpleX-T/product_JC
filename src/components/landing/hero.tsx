@@ -31,13 +31,13 @@ const Hero = () => {
           </div>
         </div>
 
-        <div className="max-w-4xl w-full mx-auto">
+        <div className="max-w-4xl w-full mx-auto hidden md:block">
           <MacScreen
             isCode={false}
             isWindowFocused={false}
             borderColor="#282D45"
             content={
-              <div className="flex items-center justify-center p-12 bg-[#0E1330] w-full h-[520px] select-none">
+              <div className="flex items-center justify-center md:p-12 bg-[#0E1330] w-full h-[520px] select-none">
                 <img src="/images/hero_dashboard.png" alt="Hero Dashboard" />
               </div>
             }

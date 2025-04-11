@@ -13,7 +13,7 @@ const Mobile = () => {
               <img src="/images/phone_mockup.svg" alt="phone mockup" />
             </div>
 
-            <div className="relative z-10 mt-8 overflow-hidden flex items-center justify-center p-8">
+            <div className="relative z-10 mt-8 overflow-hidden flex items-center justify-center p-4 md:p-8">
               <div className="absolute -bottom-2 -left-40 w-96 h-96 bg-[#7214FF30] rounded-full blur-[500px] pointer-events-none" />
               <div>
                 <h3 className="text-[#F6F6F7] text-3xl font-bold font-['Satoshi_bold'] mb-4">
@@ -28,7 +28,7 @@ const Mobile = () => {
             </div>
           </div>
 
-          <div className="bg-[#1E1A3A] px-12 pt-8 relative rounded-[10px] border border-white/10 h-full overflow-hidden">
+          <div className="bg-[#1E1A3A] px-6 md:px-12 pt-8 relative rounded-[10px] border border-white/10 h-full overflow-hidden">
             <div className="absolute -bottom-2 -left-40 w-96 h-96 bg-[#7214FF30] rounded-full blur-[500px] pointer-events-none" />
             <div className="absolute -top-2 -right-40 w-96 h-96 bg-[#7214FF30] rounded-full blur-[500px] pointer-events-none" />
 
@@ -50,14 +50,15 @@ const Mobile = () => {
           </div>
         </div>
       </div>
-      <div className="flex w-full p-4 max-w-md mx-auto items-center justify-around mt-12">
+
+      <div className="flex flex-col md:flex-row w-full p-4 gap-4 max-w-md mx-auto items-center justify-around mt-12">
         <Link
           to="/signup"
-          className="bg-[#7214FF] hover:bg-[#7214FF80] text-white px-8 py-3 rounded-full font-medium transition-colors duration-300"
+          className="bg-[#7214FF] w-full flex items-center justify-center hover:bg-[#7214FF80] text-white px-8 py-3 rounded-full font-medium transition-colors duration-300"
         >
           Get Started
         </Link>
-        <button className="text-white border border-white/20 hover:bg-white/10 px-8 py-3 rounded-full cursor-pointer font-medium transition-colors">
+        <button className="text-white flex items-center justify-center w-full border border-white/20 hover:bg-white/10 px-8 py-3 rounded-full cursor-pointer font-medium transition-colors">
           Browse all features
         </button>
       </div>
