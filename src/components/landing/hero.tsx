@@ -20,7 +20,7 @@ const Hero = () => {
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <Link
-              to="/signup"
+              to="/"
               className="bg-[#7214FF] hover:bg-[#7214FF80] text-white px-8 py-3 rounded-full font-medium transition-colors duration-300"
             >
               Get a Demo

@@ -53,7 +53,7 @@ const Mobile = () => {
 
       <div className="flex flex-col md:flex-row w-full p-4 gap-4 max-w-md mx-auto items-center justify-around mt-12">
         <Link
-          to="/signup"
+          to="/"
           className="bg-[#7214FF] w-full flex items-center justify-center hover:bg-[#7214FF80] text-white px-8 py-3 rounded-full font-medium transition-colors duration-300"
         >
           Get Started
