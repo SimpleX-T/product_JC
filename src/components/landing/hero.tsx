@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import MacScreen from "../ui/mac-screen";
+import { motion } from "motion/react";
 
 const Hero = () => {
   return (
@@ -10,14 +11,24 @@ const Hero = () => {
 
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-12">
-          <h1 className="text-5xl lg:text-6xl font-['Satoshi_Bold'] mb-6 text-transparent bg-gradient-to-b from-[#F6F6F7] to-[#7E808F] bg-clip-text">
+          <motion.h1
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="text-5xl lg:text-6xl font-['Satoshi_Bold'] mb-6 text-transparent bg-gradient-to-b from-[#F6F6F7] to-[#7E808F] bg-clip-text"
+          >
             A CRM dashboard for engineering teams
-          </h1>
-          <p className="text-lg text-white/70 max-w-2xl mx-auto mb-8">
+          </motion.h1>
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            className="text-lg text-white/70 max-w-2xl mx-auto mb-8"
+          >
             Analyze growth at a granular level. Identify trends and patterns in
             how your audience engages with your content. Take action on what
             matters most.
-          </p>
+          </motion.p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <Link
               to="/"
@@ -31,7 +42,12 @@ const Hero = () => {
           </div>
         </div>
 
-        <div className="max-w-4xl w-full mx-auto hidden md:block">
+        <motion.div
+          initial={{ opacity: 0, x: -100 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.5, delay: 0.4 }}
+          className="max-w-4xl w-full mx-auto hidden md:block"
+        >
           <MacScreen
             isCode={false}
             isWindowFocused={false}
@@ -42,7 +58,7 @@ const Hero = () => {
               </div>
             }
           />
-        </div>
+        </motion.div>
       </div>
     </section>
   );

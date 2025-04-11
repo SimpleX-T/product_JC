@@ -1,3 +1,4 @@
+import { motion } from "motion/react";
 import { Link } from "react-router-dom";
 
 const Apps = () => {
@@ -70,7 +71,13 @@ const Apps = () => {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-0">
-          <div className="bg-[#0E1330] p-8 px-4 md:px-20 rounded-xl md:rounded-r-none border md:border-r-transparent border-white/10 relative overflow-hidden flex items-center justify-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            viewport={{ once: true }}
+            className="bg-[#0E1330] p-8 px-4 md:px-20 rounded-xl md:rounded-r-none border md:border-r-transparent border-white/10 relative overflow-hidden flex items-center justify-center"
+          >
             <div className="absolute -bottom-2 -left-40 w-96 h-96 bg-[#7214FF30] rounded-full blur-[500px] pointer-events-none" />
             <div>
               <h3 className="text-[#F6F6F7] text-2xl font-['Satoshi_bold'] font-bold mb-4">
@@ -88,13 +95,19 @@ const Apps = () => {
                 Learn more
               </Link>
             </div>
-          </div>
+          </motion.div>
 
-          <div className="bg-[#0E1330] p-2 md:p-8 rounded-xl md:rounded-l-none border md:border-l-transparent border-white/10 relative overflow-hidden flex items-center justify-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.4 }}
+            viewport={{ once: true }}
+            className="bg-[#0E1330] p-2 md:p-8 rounded-xl md:rounded-l-none border md:border-l-transparent border-white/10 relative overflow-hidden flex items-center justify-center"
+          >
             <div className="absolute pointer-events-none top-2 -right-32 w-96 h-96 bg-[#32CAFD30] rounded-full blur-[390px]" />
 
             <img src="/images/image_wrapper.svg" alt="ImageWrapper" />
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>

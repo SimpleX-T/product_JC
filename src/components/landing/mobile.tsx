@@ -1,3 +1,4 @@
+import { motion } from "motion/react";
 import { Link } from "react-router-dom";
 
 const Mobile = () => {
@@ -5,7 +6,13 @@ const Mobile = () => {
     <section className="py-6 px-4 md:px-8 relative">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-[456px_1fr] gap-8 items-center">
-          <div className="rounded-[10px] border border-[#282D45] relative overflow-hidden bg-[#0E1330]">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            viewport={{ once: true }}
+            className="rounded-[10px] border border-[#282D45] relative overflow-hidden bg-[#0E1330]"
+          >
             <div className="flex items-center justify-center relative pt-8">
               <div className="absolute w-full h-full bg-gradient-to-b from-transparent via-transparent to-[#0E1330]" />
               <div className="absolute -top-10 -right-40 w-96 h-96 bg-[#41E88D30] rounded-full blur-[390px]" />
@@ -26,9 +33,15 @@ const Mobile = () => {
                 </p>
               </div>
             </div>
-          </div>
+          </motion.div>
 
-          <div className="bg-[#1E1A3A] px-6 md:px-12 pt-8 relative rounded-[10px] border border-white/10 h-full overflow-hidden">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.3 }}
+            viewport={{ once: true }}
+            className="bg-[#1E1A3A] px-6 md:px-12 pt-8 relative rounded-[10px] border border-white/10 h-full overflow-hidden"
+          >
             <div className="absolute -bottom-2 -left-40 w-96 h-96 bg-[#7214FF30] rounded-full blur-[500px] pointer-events-none" />
             <div className="absolute -top-2 -right-40 w-96 h-96 bg-[#7214FF30] rounded-full blur-[500px] pointer-events-none" />
 
@@ -47,7 +60,7 @@ const Mobile = () => {
                 className="w-full object-cover"
               />
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
 

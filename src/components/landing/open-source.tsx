@@ -1,8 +1,16 @@
+import { motion } from "motion/react";
+
 const OpenSource = () => {
   return (
     <section className="py-22 px-4 md:px-8 relative">
       <div className="max-w-7xl mx-auto">
-        <div className="bg-[#0E1330] p-4 md:p-12 rounded-xl border border-white/10 relative overflow-hidden">
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.3 }}
+          viewport={{ once: true }}
+          className="bg-[#0E1330] p-4 md:p-12 rounded-xl border border-white/10 relative overflow-hidden"
+        >
           <div className="absolute top-12 -left-20 w-96 h-96 bg-[#7214FF30] rounded-full blur-[500px] pointer-events-none" />
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 relative overflow-hidden ">
             <div className="flex items-center justify-center">
@@ -56,7 +64,7 @@ const OpenSource = () => {
               </div>
             </div>
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );
