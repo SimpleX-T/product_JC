@@ -22,6 +22,7 @@ const Features = () => {
           {features.map((feat, key) => (
             <FeatureCard
               key={key}
+              index={key}
               icon={
                 feat.iconType === "image" ? (
                   <img src={feat.iconSrc} alt={feat.title} />

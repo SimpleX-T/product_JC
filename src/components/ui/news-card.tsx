@@ -1,3 +1,4 @@
+import { motion } from "motion/react";
 import { FaArrowRight } from "react-icons/fa6";
 import { Link } from "react-router-dom";
 
@@ -6,14 +7,22 @@ const NewsCard = ({
   date,
   details,
   image,
+  index,
 }: {
   title: string;
   date: string;
   details: string;
   image: string;
+  index: number;
 }) => {
   return (
-    <div className="bg-[#0E1330] rounded-xl border border-[#282D45] p-4 md:p-6 overflow-hidden">
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5, delay: index * 0.2 }}
+      viewport={{ once: true }}
+      className="bg-[#0E1330] rounded-xl border border-[#282D45] p-4 md:p-6 overflow-hidden"
+    >
       <div className="w-full flex items-center justify-center rounded-md">
         <img src={image} alt={title} className="w-full object-cover" />
       </div>
@@ -33,7 +42,7 @@ const NewsCard = ({
           <FaArrowRight />
         </Link>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

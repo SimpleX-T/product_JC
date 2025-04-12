@@ -1,3 +1,5 @@
+import { motion } from "motion/react";
+
 const TestimonialCard = ({
   name,
   role,
@@ -10,7 +12,13 @@ const TestimonialCard = ({
   avatar: string;
 }) => {
   return (
-    <div className="relative max-w-md mx-auto">
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5, delay: 0.4 }}
+      viewport={{ once: true }}
+      className="relative max-w-md mx-auto"
+    >
       <div className="bg-[#0E1330] z-1 text-[#F6F6F7] border border-[#282D45] p-6 rounded-xl shadow-lg max-w-sm relative overflow-hidden w-11/12 mx-auto">
         <div className="flex items-center gap-3 mb-4">
           <img
@@ -28,7 +36,7 @@ const TestimonialCard = ({
       </div>
 
       <div className="absolute -bottom-6 left-0 w-full h-30 bg-gradient-to-r from-[#A64CE860] via-[#A8E9FF60] to-[#C6FFE060] z-0 rounded-xl" />
-    </div>
+    </motion.div>
   );
 };
 

@@ -22,6 +22,7 @@ const News = () => {
           {newsArticles.map((news, key) => (
             <NewsCard
               key={key}
+              index={key}
               title={news.title}
               details={news.details}
               date={news.date}
